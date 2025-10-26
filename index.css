@@ -44,9 +44,10 @@ a {
 
 .stickers {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  margin-left: 70px;
 }
 
 .next:active .stickers { 
@@ -58,6 +59,7 @@ a {
 }
   
 .carousel {
+  max-width: 100%;
   position: relative;
   overflow: hidden;
   margin-top: 25vw;
@@ -69,11 +71,12 @@ a {
 }
   
 .carousel-item {
-  min-width: 100%;
+  min-width: 300px;
 }
   
 img {
   width: 100%;
+  max-width: 300px;
 }
 
 .carousel-control {
@@ -357,7 +360,5 @@ body {
 }
 
 @media screen and (min-height: 1px) and (max-height: 640px) {
-  body {
-    display: none;
-  }
-  }
+
+}
