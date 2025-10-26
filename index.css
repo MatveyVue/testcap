@@ -9,6 +9,7 @@ body {
   background-attachment: fixed;
   touch-action: none;
   background-color: black;
+  user-select: none;
 }
 
 #stars {
@@ -20,32 +21,12 @@ body {
   z-index: -1;
 }
 
-.transaction {
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  bottom: 0;
-  width: 93%; 
-  height: 50px;
-  border: none;
-  border-radius: 15px;
-  font-family: Geologica;
-  color: black;
-  font-size: 16px;
-  max-width: 500px;
-  cursor: pointer;
-  left: 50%;
-  margin-bottom: 10px;
-  transform:translate(-50%, -50%);
-}
-
 a {
   text-decoration: none;
 }
 
 .stickers {
   width: 100%;
-  max-width: 500px;
-  max-height: 500px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
@@ -113,6 +94,26 @@ img {
   position: absolute;
   bottom: 0;
   margin-bottom: 50px;
+}
+
+.back {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -5vw;
+  width: 93%; 
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  font-family: Geologica;
+  color: black;
+  font-size: 16px;
+  max-width: 500px;
+  cursor: pointer;
+  top: 90vh;
+  left: 50%;
+  margin-top: 38px;
+  transform:translate(-50%, -50%);
 }
 
 .giveaway {
@@ -356,8 +357,4 @@ img {
 body {
   display: none;
 }
-}
-
-@media screen and (min-height: 1px) and (max-height: 640px) {
-
 }
