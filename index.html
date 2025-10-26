@@ -15,8 +15,7 @@
 <script type="module" src="scripts/main.js"></script>
 <script type="module" src="scripts/transaction.js"></script>
 </head>
-<body>
-<div style="position: absolute; display: none;" id="ton-connect"></div>
+<body oncopy="return false;" oncut="return false;">
 <canvas id="stars"></canvas>
 <div id="app">
 <div id="preloader">
@@ -46,13 +45,14 @@
         <button @click="prev" class="carousel-control prev"></button>
         <button @click="next" class="carousel-control next"></button>
 </div>
+<div style="display: none;" id="ton-connect"></div>
 
 <script type="module" src="scripts/timer.js"></script>
 
 <center>
 <button onclick="handlePayment()" class="giveaway">Send Transaction</button>
-<a href="javascript:Telegram.WebApp.shareToStory('https://github.com/MatveyVue/giftcap/blob/main/CapStory.jpeg?raw=true',{text:'Enter the NFT Hate Caps giveaway at @hatecapsbot'});">
-    <button class="task">Share To Story</button>
+<a href="wallet.html">
+    <button class="task">Wallet</button>
 </a>
 </center>
 </div>
