@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://telegram.org/js/telegram-web-app.js?2"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<title>HateCaps</title>
+<link rel="stylesheet" href="index.css">
+<script type="module" src="scripts/background.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js" defer></script>
+<script type="module" src="scripts/main.js"></script>
+<script type="module" src="scripts/transaction.js"></script>
+</head>
+<body>
+<div style="position: absolute; display: none;" id="ton-connect"></div>
+<canvas id="stars"></canvas>
+<div id="app">
+<div id="preloader">
+  <div style="margin-top: -20px;" class="loader">loading</div>
+</div>
+<div class="timer">
+<div class="timer-inline-block">
+<b>
+    <span class="day" id="days"></span>
+    <span class="days">DAYS</span>
+<div class="time">
+    <span class="seconds">S</span>
+    <span class="second" id="seconds"></span>
+    <span class="minutes">M</span>
+    <span class="minute" id="minutes"></span>
+    <span class="hours">H</span>
+    <span class="hour" id="hours"></span>
+</div>
+</b>
+</div>
+</div>
+
+<div class="carousel">
+    <div class="carousel-inner" :style="{ transform: 'translateX(' + (-currentIndex * 100) + '%)' }">
+        <img loading="eager" class="stickers" v-for="(photo, index) in photos" :key="index" :src="photo" alt="Photo"/>
+    </div>
+        <button @click="prev" class="carousel-control prev"></button>
+        <button @click="next" class="carousel-control next"></button>
+</div>
+
+<script type="module" src="scripts/timer.js"></script>
+
+<center>
+<button onclick="handlePayment()" class="giveaway">Send Transaction</button>
+<a href="javascript:Telegram.WebApp.shareToStory('https://github.com/MatveyVue/giftcap/blob/main/CapStory.jpeg?raw=true',{text:'Enter the NFT Hate Caps giveaway at @hatecapsbot'});">
+    <button class="task">Share To Story</button>
+</a>
+</center>
+</div>
+
+<script>
+window.addEventListener('load', function() {
+    // Убираем стандартное поведение при загрузке, т.к. будем использовать setTimeout
+});
+
+// Устанавливаем таймер на 10 секунд (10000 миллисекунд)
+setTimeout(function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) { // Проверяем, существует ли элемент
+        preloader.classList.add('hidden'); // Добавляем класс для скрытия
+    }
+}, 5000); // 10000 миллисекунд = 10 секунд
+    </script>
+</body>
+</html>

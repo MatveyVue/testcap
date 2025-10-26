@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-attachment: fixed;
+  touch-action: none;
+  background-color: black;
+}
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.transaction {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  width: 93%; 
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  font-family: Geologica;
+  color: black;
+  font-size: 16px;
+  max-width: 500px;
+  cursor: pointer;
+  left: 50%;
+  margin-bottom: 10px;
+  transform:translate(-50%, -50%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.stickers {
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.next:active .stickers { 
+  transform: rotateY(-20px);
+}
+
+.prev:active .stickers { 
+  transform: rotateY(-20px);
+}
+  
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 25vw;
+}
+  
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+  
+.carousel-item {
+  min-width: 100%;
+}
+  
+img {
+  width: 100%;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  cursor: pointer;
+}
+  
+.prev {
+  background-color: rgba(39, 39,39, 0);
+  color: White;
+  left: 10px;
+  height: 200px;
+  width: 50px;
+  font-size: 36px;
+}
+  
+.next {
+  background-color: rgba(39, 39,39, 0);
+  color: White;
+  right: 10px;
+  height: 200px;
+  width: 50px;
+  font-size: 36px;
+}
+
+.bar {
+  background-color: rgb(15, 15, 15);
+  width: 160px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+}
+
+.giveaway {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -5vw;
+  width: 93%; 
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  font-family: Geologica;
+  color: black;
+  font-size: 16px;
+  max-width: 500px;
+  cursor: pointer;
+  top: 90vh;
+  left: 50%;
+  margin-top: -17px;
+  transform:translate(-50%, -50%);
+}
+
+.task {
+  background-color: rgb(37, 37, 37);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -18vw;
+  width: 93%; 
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  font-family: Geologica;
+  color: white;
+  font-size: 16px;
+  max-width: 500px;
+  cursor: pointer;
+  top: 90vh;
+  left: 50%;
+  margin-top: 38px;
+  transform:translate(-50%, -50%);
+}
+
+.timer-row-container {
+  display: inline-block; 
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.day {
+  font-family: Geologica;
+  color: white;
+  font-size: 20vw;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 5px; 
+  margin-left: 15%;
+}
+
+.days {
+  font-family: Geologica;
+  color: white;
+  font-size: 20vw;
+  display: inline-block;
+  vertical-align: baseline;
+  float: right;
+  margin-right: 18px;
+  top: 0;
+  position: fixed;
+}
+
+.second {
+  font-family: Geologica;
+  color: white;
+  font-size: 10vw;
+  display: inline-block;
+  vertical-align: baseline;
+  float: right;
+  margin-right: 2%;
+}
+
+.seconds {
+  font-family: Geologica;
+  color: white;
+  font-size: 10vw;
+  display: inline-block;
+  vertical-align: baseline;
+  float: right;
+  margin-right: 3%;
+}
+
+.minute {
+  font-family: Geologica;
+  color: white;
+  font-size: 10vw;
+  display: inline-block;
+  vertical-align: baseline;
+  float: right;
+  margin-right: 2%;
+}
+
+.minutes {
+  font-family: Geologica;
+  color: white;
+  font-size: 10vw;
+  display: inline-block;
+  vertical-align: baseline;
+  float: right;
+  margin-right: 3%;
+}
+
+.hour {
+  font-family: Geologica;
+  color: white;
+  font-size: 10vw;
+  display: inline-block;
+  vertical-align: baseline;
+  float: right;
+  margin-right: 2%;
+}
+
+.hours {
+  font-family: Geologica;
+  color: white;
+  font-size: 10vw;
+  display: inline-block;
+  vertical-align: baseline;
+  float: right;
+  margin-right: 3%;
+}
+
+.time {
+  display: block; 
+  text-align: center;
+  margin-top: -20px;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.transaction {
+  background-color: rgb(255, 255, 255);
+  width: 90%; 
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  font-family: Geologica;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tc {
+  bottom: 0;
+  position: absolute;
+  
+}
+
+#preloader {
+  position: fixed; /* Фиксированное позиционирование, чтобы он был поверх всего */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Цвет фона прелоадера */
+  z-index: 9999; /* Очень высокий z-index, чтобы быть поверх всего */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Плавный переход для скрытия */
+  opacity: 1; /* Изначально видим */
+}
+
+/* --- Стиль для скрытия прелоадера --- */
+#preloader.hidden {
+  opacity: 0; /* Делаем невидимым */
+  pointer-events: none; 
+  transform: translateY(-100%);
+}
+
+#preloader.hidden {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%); 
+    pointer-events: none;
+  }
+}
+
+.loader,
+.loader:after {
+  overflow:hidden;
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(101,171,248, 0.2);
+  border-right: 1.1em solid rgba(101,171,248, 0.2);
+  border-bottom: 1.1em solid rgba(101,171,248, 0.2);
+  border-left: 1.1em solid #3a7dc0;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 100000px) {
+body {
+  display: none;
+}
+}
+
+@media screen and (min-height: 1px) and (max-height: 640px) {
+  body {
+    display: none;
+  }
+  }
