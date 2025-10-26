@@ -40,7 +40,7 @@
 </div>
 
 <div class="carousel">
-    <div class="carousel-inner" :style="{ transform: 'translateX(' + (-currentIndex * 85) + '%)' }">
+    <div class="carousel-inner" :style="{ transform: 'translateX(' + (-currentIndex * 100) + '%)' }">
         <img loading="eager" class="stickers" v-for="(photo, index) in photos" :key="index" :src="photo" alt="Photo"/>
     </div>
         <button @click="prev" class="carousel-control prev"></button>
