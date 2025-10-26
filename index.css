@@ -44,10 +44,9 @@ a {
 
 .stickers {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  margin-left: 70px;
 }
 
 .next:active .stickers { 
@@ -62,7 +61,7 @@ a {
   max-width: 100%;
   position: relative;
   overflow: hidden;
-  margin-top: 25vw;
+  margin-top: 20vw;
 }
   
 .carousel-inner {
@@ -71,12 +70,11 @@ a {
 }
   
 .carousel-item {
-  min-width: 300px;
+  width: 100%;
 }
   
 img {
   width: 100%;
-  max-width: 300px;
 }
 
 .carousel-control {
