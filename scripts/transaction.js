@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 return;
         }
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-            manifestUrl: 'https://gist.githubusercontent.com/Danya-byte/8736e11dd232567a697cc2fd97debb06/raw/497d2ff94ba84f434e567f23f93a417129d6ab47/HateUsers.json',
+            manifestUrl: 'https://raw.githubusercontent.com/MatveyVue/caps/refs/heads/main/tonconnect-manifest.json',
             buttonRootId: 'ton-connect'
         });
     
