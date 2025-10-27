@@ -26,33 +26,47 @@ a {
 }
 
 .stickers {
-  width: 100%;
+  display: block; 
+  width: 100%; 
+  max-width: 300px;
+  height: auto; 
+  object-fit: contain; 
+  margin: 0 auto; 
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
-.next:active .stickers { 
-  transform: rotateY(-20px);
+.next:active .stickers {
+  transform: rotateY(-20deg); 
 }
 
-.prev:active .stickers { 
-  transform: rotateY(-20px);
+.prev:active .stickers {
+  transform: rotateY(20deg);
 }
   
 .carousel {
-  max-width: 100%;
   position: relative;
   overflow: hidden;
-  margin-top: 20vw;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10vw;
+  padding: 20px 0;
 }
-  
+
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
 }
-  
+
 .carousel-item {
+  flex-shrink: 0; 
   width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  box-sizing: border-box; 
+  padding: 0 15px; 
 }
   
 img {
@@ -187,7 +201,7 @@ img {
 .second {
   font-family: Geologica;
   color: white;
-  font-size: 10vw;
+  font-size: 8vw;
   display: inline-block;
   vertical-align: baseline;
   float: right;
@@ -197,7 +211,7 @@ img {
 .seconds {
   font-family: Geologica;
   color: white;
-  font-size: 10vw;
+  font-size: 8vw;
   display: inline-block;
   vertical-align: baseline;
   float: right;
@@ -207,7 +221,7 @@ img {
 .minute {
   font-family: Geologica;
   color: white;
-  font-size: 10vw;
+  font-size: 8vw;
   display: inline-block;
   vertical-align: baseline;
   float: right;
@@ -217,7 +231,7 @@ img {
 .minutes {
   font-family: Geologica;
   color: white;
-  font-size: 10vw;
+  font-size: 8vw;
   display: inline-block;
   vertical-align: baseline;
   float: right;
@@ -227,7 +241,7 @@ img {
 .hour {
   font-family: Geologica;
   color: white;
-  font-size: 10vw;
+  font-size: 8vw;
   display: inline-block;
   vertical-align: baseline;
   float: right;
@@ -237,7 +251,7 @@ img {
 .hours {
   font-family: Geologica;
   color: white;
-  font-size: 10vw;
+  font-size: 8vw;
   display: inline-block;
   vertical-align: baseline;
   float: right;
@@ -247,7 +261,8 @@ img {
 .time {
   display: block; 
   text-align: center;
-  margin-top: -20px;
+  margin-top: -10px;
+  margin-right: 10px;
 }
 
 .a {
@@ -350,6 +365,25 @@ img {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-control {
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+  .carousel-control.prev {
+    left: 5px;
+  }
+  .carousel-control.next {
+    right: 5px;
+  }
+  .carousel-item {
+    padding: 0 5px;
+  }
+  .stickers {
+    max-width: 100%;
   }
 }
 
